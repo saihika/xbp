@@ -2,79 +2,38 @@
 <html lang="jp">
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
-    <title>第８回ドキュメント</title>
+    <title>第９回インタビュー</title>
     <!-- ⑤スタイルシートの設定をしよう -->
     <link rel="stylesheet" href="css/style.css">
     <!-- h1.htmlからある行をコピペしてくればOK -->
 </head>
 <body>
-    <h1>ドキュメンテーションと公開</h1>
-    <h2>賃貸情報の分析</h2>
-    <h3>①おすすめ物件の条件</h3>
+    <h1>インタビューの参考点</h1>
+    <h3>心のコップ</h3>
     <div>
         <ul>
-            <li>自分が一人暮らしを始める時に、住む家を決めるときに実際に気にした条件を考えた。</li>
-            <li>家賃の安さ、駅や学校からの距離、を重視して分析してみました。</li>
-            <li>第１に学校からの距離、第２に家賃の安さ、第３に駅からの距離を重視して分析する。</li>
+            <li>質問の対象によって簡単な言葉だったり、一言で返せるような質問をするなどの配慮が見られた。</li>
         </ul>
     </div>
-    <h3>②分析(距離)</h3>
+    <h3>制服</h3>
     <div>
-        <img src="images/合計時間.png" width="20%"><img src="images/徒歩、路線.png" width="20%"><img src="images/家賃.png" width="20%"><br>
         <ul>
-            <li>まず、36路線の中から学校からの距離と物件から駅が近い物件が多い路線を探していくつかの路線に絞る。</li>
-            <li>合計時間の平均、物件から駅までの距離の平均を路線別にグラフを出し、どちらのグラフにも上位にいる路線を選び出す。</li>
-            <li>ただ、合計時間が少ない＝都会で地価が高いため家賃が高くなってしまう。その中でも、京急本線・湘南新宿ライン高海・JR東海道本線の路線はどちらの分野にも上位にいる。</li>
-            <li>次に家賃のグラフを見てみる。家賃のグラフは上位二駅と下位二駅がずば抜けているものの、そのほかの駅は5～6万であまり差が無いことがわかる。</li>
-            <li>この3つのグラフから条件の優先順に上位の駅をよりあげると、学校からの距離、駅からの距離ともに上位に位置する京急本線に路線を絞る。</li>
-            <li>ここから京急本線の中から条件にあった駅を探していく。</li>
+            <li>インタビュー内容を統一することで、他人との相違点や同じ所などが明確になり、インタビュー内容をまとめやすくしている。</li>
         </ul>
     </div>
-    <h3>③分析(京急本線)</h3>
-    <div>
-        <ul>
-            <li>京急線の中から駅を絞るに当たって、駅の近くの物件が多いか、家賃の安さでエリアを絞っていく。</li>
-            <li>自分が実際に一人暮しの時に家賃6万円以下、駅から歩いて15分以下の文献を探していたので今回もその条件で絞っていく。</li>
-　　　　</ul>
-　　</div>
-　　<img src="images/京急本線のヒストグラム2.png" width="50%">
-　　<div>
+   <h3>スティーブジョブス</h3>
+   <div>
        <ul>
-           <li>このグラフ家賃5万円以下、徒歩駅から15分以内にある物件を出した物。</li>
-           <li>このグラフから南太田、子安、塀風浦、弘明寺、戸部駅付近がおすすめエリアだと考える。</li>
+           <li>インタビューというと、質問をしそれに答えるという形式になる。しかし、相手が外国人ということもあってか質問というより会話のような感じで、相手が自由に話せるような感じになっている。</li>
+           <li>また、自分の思っていること、インタビュー中に感じたことも踏まえて話す内容を変えている。</li>
        </ul>
-</div>
-　　<h3>④ソースコード</h3>
-<div>
-    <code>
-        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
-        <li style="background-color:#EFF;">import pandas as pd  # データ分析に用いるライブラリ</li>
-        <li style="background-color:#EEF;">import matplotlib.pyplot as plt  # グラフ表示に用いるライブラリ</li>
-        <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True)  # 表示のずれを少し緩和</li>
-        <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'  # グラフ表示におけるフォントの指定</li>
-        <li style="background-color:#EFF;"></li>
-        <li style="background-color:#EEF;">data_path = "./data.csv"</li>
-        <li style="background-color:#EFF;">df_data = pd.read_csv(data_path,  encoding="utf-8-sig")</li>
-        <li style="background-color:#EEF;"></li>
-        <li style="background-color:#EFF;">mask = (df_data["路線"] == "京急本線") &amp; (df_data["徒歩"] &lt; 15) &amp; (df_data["家賃"] &lt; 6)</li>
-        <li style="background-color:#EEF;">print(df_data[mask])</li>
-        <li style="background-color:#EFF;"></li>
-        <li style="background-color:#EEF;">axes = df_data[mask].loc[:, "家賃"].hist(by=df_data[mask].loc[:, "駅"],</li>
-        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;range=(0, 5), bins=10,</li>
-        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figsize=(10, 8),</li>
-        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sharex=True, sharey=True)</li>
-        <li style="background-color:#EEF;"></li>
-        <li style="background-color:#EFF;">plt.suptitle("京急本線の家賃のヒストグラム") # グラフタイトル</li>
-        <li style="background-color:#EEF;">plt.subplots_adjust(top=0.9,</li>
-        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hspace=1)</li>
-        <li style="background-color:#EEF;">plt.show()</li>
-        </ol></code>
-</div>
-    <h3>⑤班の発表power point</h3>
-    <a href="./files/purezenn.pdf">班プレゼンテーション</a><br>
-
-
-
+   </div>
+   <h3>劇団ひとり</h3>
+   <div>
+       <ul>
+           <li>聞き手、受け手にならずにそれぞれが両方の役割をして、自分の体験を話しながら相手の話の時には相づちを打って、相手が話しやすい環境を作っていた。</li>
+       </ul>
+   </div>
     </div>
 
 </body>
