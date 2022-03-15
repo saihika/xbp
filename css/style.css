@@ -27,9 +27,12 @@ html, body {
 	color: #393939;
     margin-left: 15px;
     margin-bottom: 40px;
-	background: #efefef;
+    
+	background: #ffebcd;
 }
-h1{
+h1{ background-color: peru;
+    
+
     text-indent: 0em;
 }
 h2{
