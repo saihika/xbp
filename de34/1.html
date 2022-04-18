@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>XBPのページ</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <h1>第１回</h1>
+    <h2>マイコンボードの基礎</h2>
+    <h3>マイコンボード</h3>
+    <div>
+        <ul>
+            <li>今回の授業で使用するマイコンボード</li>
+            <li><a href="https://www.amazon.co.jp/s?k=arduino&i=industrial&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss_1" target="_blank">Arduino UNO</a></li>
+            <li>その他、wifiやbluetoothの機能付きの代表であるESP32やディスプレイ付きのM5stackなどの種類がある。</li>
+        </ul>
+    </div>
+    <h3>LEDを光らせる(Lチカ)</h3>
+    <div>
+        <ul>
+            <li>LEDの長い方(＋)を13番ピンに接続し、短い方(－)をGNdに接続する。</li>
+            <li>Arduinoにプログラムを書き込む。</li>
+        </ul>
+    </div>
+    <h3>プログラムする際のポイント</h3>
+    <h3>ポイント１</h3>
+    <div>
+        <ul>
+            <li>setupは最初に一回のみ実行されるプログラム、loopは繰り返し実行されるプログラム</li>
+            <li>{}のあいだがそれぞれのプログラムとなる。</li>
+        </ul>
+    </div>
+    <h3>ポイント２</h3>
+    <div>
+        <ul>
+            <li>Arduinoでは基本的に命令文の最後にはセミコロンをつける。</li>
+        </ul>
+    </div>
+    <h3>ポイント３</h3>
+    <div>
+        <ul>
+            <li>pinmodeで指定したピンを入力用で使うのか出力用で使うのかを設定する。</li>
+            <li>digitalwrite(High)でLEDがつく。(low)で消える。</li>
+        </ul>
+    </div>
+    <h3>ポイント４</h3>
+    <div>
+        <ul>
+            <li>delayで待つ。</li>
+            <li>fordeで制御したり、if文で条件を追加できる。</li>
+        </ul>
+    </div>
+    <h2>日常の感情</h2>
+    <h3>正の感情</h3>
+    <div>
+        <ul>
+            <li>うれしい＝金をもらったとき</li>
+            <li>楽しい＝サッカーしてるとき</li>
+        </ul>
+    </div>
+    <h3>負の感情</h3>
+    <div>
+        <ul>
+            <li>悲しい＝PASMO無くしたとき</li>
+            <li>さみしい＝一人暮し</li>
+        </ul>
+    </div>
+</body>
+</html>
